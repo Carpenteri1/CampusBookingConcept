@@ -1,0 +1,91 @@
+﻿@model List<Resources>
+
+<div class="d-flex flex-row">
+    <div class="p-2">
+        <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
+            <img src="~/Files/Icons/previous.png" width="16" style="padding-bottom:0.2em;" />
+            Till Stundentportalen
+        </a>
+    </div>
+</div>
+
+<div style=" margin-top:-2.8em;">
+    <div class="d-flex flex-row justify-content-center">
+        <img src="~/Files/Images/campus_liggande_svart_trans.png" width="250" />
+    </div>
+    <form class="d-flex justify-content-center form-row">
+        <div class="form-group " style="width:20em;">
+            <h2 class="control-label text-center p-3" style="font-weight:600;">Schemasök</h2>
+            <input type="text" value='Sök..' class="form-control" style="height:2em;font-weight:500;font-size:1.5em;color:gray;">
+            @* @Html.DropDownList("Avancerad Sökning")*@
+            <button type="submit" value="SÖK" class="w-100 mw-100 h-25 mt-3" style="height: 2em; font-weight: 500; font-size: 1.5em; border: 1px solid lightgray;">SÖK</button>
+        </div>
+    </form>
+</div> 
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img src="~/Files/Icons/calendar.png" width="16" style="padding-bottom: 0.2em;" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
+                </div>
+                <div class="col-5"></div>
+                <div class="col-3" style="padding-left:4.7em;">
+                    <p>
+                       <img src="~/Files/Icons/clock.png" width="16" style="padding-bottom: 0.2em;" />&nbsp;&nbsp;@DateTime.Now.ToString("HH mm")
+                    </p>
+
+                </div>
+            </div>
+            <div>
+                @foreach (var s in Model)
+                {
+                    if (s.location != null)
+                    {
+                        <div style="border-left:8px solid lightblue;background-color:whitesmoke;">
+                            <ul style="list-style:none;" class="p-2">
+                                <li>
+                                    <p>
+                                        <img src="~/Files/Icons/clock.png" width="16" />
+                                        Test
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="~/Files/Icons/home.png" width="16" />
+                                        @s.location
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="~/Files/Icons/students-cap.png" width="16" />
+
+                                </li>
+                            </ul>
+                        </div>
+                    }
+
+                }
+
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+
+
+
+
+    @*
+        <div class="container">
+            @if(Model.Count() > 0 ||
+         Model != null)
+            {
+                foreach(var s in Model)
+                {
+            <p>
+                @s.name
+            </p>
+                }
+
+            }
+        </div>*@
