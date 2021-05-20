@@ -1,91 +1,79 @@
 ﻿@model List<Resources>
-
-<div class="d-flex flex-row">
-    <div class="p-2">
-        <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
-            <img src="~/Files/Icons/previous.png" width="16" style="padding-bottom:0.2em;" />
-            Till Stundentportalen
-        </a>
-    </div>
-</div>
-
-<div style=" margin-top:-2.8em;">
-    <div class="d-flex flex-row justify-content-center">
-        <img src="~/Files/Images/campus_liggande_svart_trans.png" width="250" />
-    </div>
-    <form class="d-flex justify-content-center form-row">
-        <div class="form-group " style="width:20em;">
-            <h2 class="control-label text-center p-3" style="font-weight:600;">Schemasök</h2>
-            <input type="text" value='Sök..' class="form-control" style="height:2em;font-weight:500;font-size:1.5em;color:gray;">
-            @* @Html.DropDownList("Avancerad Sökning")*@
-            <button type="submit" value="SÖK" class="w-100 mw-100 h-25 mt-3" style="height: 2em; font-weight: 500; font-size: 1.5em; border: 1px solid lightgray;">SÖK</button>
-        </div>
-    </form>
-</div> 
-    <div class="row">
-        <div class="col-4"></div>
+    <div class="row p-2">
         <div class="col-4">
-            <div class="row">
-                <div class="col-4">
-                    <img src="~/Files/Icons/calendar.png" width="16" style="padding-bottom: 0.2em;" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
-                </div>
-                <div class="col-5"></div>
-                <div class="col-3" style="padding-left:4.7em;">
-                    <p>
-                       <img src="~/Files/Icons/clock.png" width="16" style="padding-bottom: 0.2em;" />&nbsp;&nbsp;@DateTime.Now.ToString("HH mm")
-                    </p>
-
+            <div class=" d-flex justify-content-start">
+                <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
+                    <img src="~/Files/Icons/previous.png" width="16" style="padding-bottom:0.2em;" />
+                    Till Stundentportalen
+                </a>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex justify-content-center">
+                <img src="~/Files/Images/campus_liggande_svart_trans.png" width="250" />
+            </div>
+            <div class="d-flex justify-content-center">
+                <form class="form-row">
+                    <div class="form-group " style="width:20em;">
+                        <h1 class="control-label text-center p-3" style="font-weight:700;">Schemasök</h1>
+                        <input type="text" value='Sök..' class="form-control searchfrominput">
+                        <div class="align-items-center d-flex justify-content-center">
+                            <button type="button" id="hideshowbutton" class="dropdownbutton">
+                                <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" height="16" /> &nbsp;Avancerad sökning
+                            </button>
+                        </div>
+                        <div id="expandingDiv">
+                            <h1>awesome title</h1>
+                            <p>Some awesome text and stuff</p>
+                        </div>
+                        <button type="submit" value="SÖK" class="w-100 mw-100 mt-3 searchformbutton">SÖK</button>
+                    </div>
+                </form>
+            </div>
+            <div class="d-flex pt-2 search-form-timedate">
+                    <img src="~/Files/Icons/calendar.png" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
+                <div class="ml-auto search-form-timedate">
+                    <img src="~/Files/Icons/clock.png" width="18"  />&nbsp;&nbsp;<span id="LiveTime" style="font-size:0.8em;"></span>
                 </div>
             </div>
-            <div>
-                @foreach (var s in Model)
+            <div class="d-flex pt-2 search-form-boking-ammount">
+                    <p>@Html.CheckBox("noting", false) Visa även avslutade bokningar</p>
+                <div class="ml-auto">
+                    <p>Antal bokningar: 0</p>
+                </div>
+            </div>
+            @foreach (var s in Model)
+            {
+                if (s.location != null)
                 {
-                    if (s.location != null)
-                    {
-                        <div style="border-left:8px solid lightblue;background-color:whitesmoke;">
-                            <ul style="list-style:none;" class="p-2">
-                                <li>
-                                    <p>
-                                        <img src="~/Files/Icons/clock.png" width="16" />
-                                        Test
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <img src="~/Files/Icons/home.png" width="16" />
-                                        @s.location
-                                    </p>
-                                </li>
-                                <li>
-                                    <img src="~/Files/Icons/students-cap.png" width="16" />
+            <ul class="p-2 info-block">
+                <li>
+                    <img src="~/Files/Icons/clock.png" width="24" />&nbsp;&nbsp;&nbsp;Time start - time end ######progress bar
+                </li>
+                <li>
+                    <img src="~/Files/Icons/home.png" width="24" />&nbsp;&nbsp;&nbsp;house location&nbsp;&nbsp;&nbsp;<img src="~/Files/Icons/pin.png" width="24">&nbsp;class room
 
-                                </li>
-                            </ul>
-                        </div>
+                </li>
+                <li>
+                    <img src="~/Files/Icons/students-cap.png" width="24" />&nbsp;&nbsp;&nbsp;class
+                </li>
+                <li id="HiddenListItem" class="pt-3">
+                    <img src="~/Files/Icons/info-button.png" width="24" />&nbsp;&nbsp;&nbsp;extra stuff and so on
+                </li>
+                <li class="align-items-center d-flex justify-content-center p-2">
+                        <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" id="hideshowlistitem" width="20" />
+                </li>
+             </ul>
                     }
 
                 }
-
+            </div>
+            <div class="col-4">
+                <div class=" d-flex justify-content-end">
+                    <a class="btn" style="border:1px solid lightgrey;" href="">
+                        Ny bokning
+                        <img src="~/Files/Icons/next.png" width="16" style="padding-bottom:0.2em;" />
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="col-4"></div>
-    </div>
-
-
-
-
-
-    @*
-        <div class="container">
-            @if(Model.Count() > 0 ||
-         Model != null)
-            {
-                foreach(var s in Model)
-                {
-            <p>
-                @s.name
-            </p>
-                }
-
-            }
-        </div>*@

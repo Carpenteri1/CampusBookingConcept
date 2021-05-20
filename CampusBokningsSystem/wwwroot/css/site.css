@@ -1,5 +1,51 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+.top-container {
+    width: 100%;
+    /*height: 100px;*/
+    display: flex;
+    justify-content: space-between;
+}
+.searchformbutton {
+    height: 2em;
+    font-weight: 500;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    outline:none;
+    background-color: #fafafa;
+}
+.searchfrominput {
+    height: 2em;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: gray;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.search-form-timedate {
+    font-size: 1.3em;
+    font-weight:500;
+}
+.search-form-boking-ammount {
+    font-size:1em;
+    font-weight:500;
+}
+.dropdownbutton {
+    padding: 2em;
+    text-align: center;
+    font-weight:400;
+    border: none !important;
+    outline: none !important;
+    background-color: Transparent;
+}
+.info-block {
+    border-left: 8px solid rgba(170, 220, 220, 1.0);
+    background-color: #fafafa;
+    padding: 2em;
+    font-size: 1.5em;
+    list-style: none;
+}
 
 a.navbar-brand {
   white-space: normal;
