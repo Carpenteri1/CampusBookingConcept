@@ -44,6 +44,7 @@
             </div>
             @foreach (var s in Model)
             {
+
                 if (s.location != null)
                 {
             <ul class="p-2 info-block">
@@ -61,12 +62,13 @@
                     <img src="~/Files/Icons/info-button.png" width="24" />&nbsp;&nbsp;&nbsp;extra stuff and so on
                 </li>
                 <li class="align-items-center d-flex justify-content-center p-2">
-                        <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" id="hideshowlistitem" width="20" />
+
+                        <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" width="20" />
                 </li>
              </ul>
-                    }
-
                 }
+
+            }
             </div>
             <div class="col-4">
                 <div class=" d-flex justify-content-end">
