@@ -11,5 +11,5 @@ They also want the ability to book the rooms,
 what times they are booked and free.
 There should also be the ability to vote or let campus know what the students wants to have in there room.
 
-### Kanban
+## Kanban
 [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
