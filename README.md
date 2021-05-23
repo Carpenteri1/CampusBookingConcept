@@ -11,5 +11,5 @@ for example, tv, how many tables, pc's and so on.
 Students should have the ability to give feedback on what tools they want to have for the specific rooms, general comments and suggestions or feedback.
 I might add some kinde of voting system also.
 
-## Kanban
+## Kanban - More cards will be added
 [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
