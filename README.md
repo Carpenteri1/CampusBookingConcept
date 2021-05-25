@@ -30,7 +30,7 @@ Students should have the ability to give feedback on what tools they want to hav
 
 
 ## Kanban
-### More cards will be added
+##### More cards will be added
 - [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
 
 
