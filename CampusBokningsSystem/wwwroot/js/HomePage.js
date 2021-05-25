@@ -1,4 +1,5 @@
-﻿let infoBlockArray = $(".info-block").toArray();
+﻿/*
+let infoBlockArray = $(".info-block").toArray();
 
 $(document)
     .ready(SetIdAndHide)
@@ -51,4 +52,4 @@ function SetIdAndHide() {
         newChildAttribute = infoBlockArray[i].children.item(4);
         newChildAttribute.firstElementChild.id = "buttonimg" + i;
     }
-}
+}*/
