@@ -9,6 +9,15 @@ Iv hade meetings with the staff and gathered suggestions and feedback on what th
 The meeting have been done via teams and mail do to the current corona pandemic. 
 The course ends by showing the results of the project to campus.
 
+- Projects is built on net core 3.1
+- Anguler
+- Typescript
+- MVC
+- AspNet
+- Mysql
+- SQL
+- EntityFramework core
+
 
 ## Goal
 Make an updated concept for there current booking system. 
