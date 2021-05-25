@@ -9,16 +9,6 @@ Iv hade meetings with the staff and gathered suggestions and feedback on what th
 The meeting have been done via teams and mail do to the current corona pandemic. 
 The course ends by showing the results of the project to campus.
 
-- Projects is built on net core 3.1
-- Anguler
-- Typescript
-- MVC
-- AspNet
-- Mysql
-- SQL
-- EntityFramework core
-
-
 ## Goal
 Make an updated concept for there current booking system. 
 first and foremost campus wants the ability to let students book study rooms.
@@ -27,12 +17,22 @@ for example, tv, how many tables, pc's and so on.
 
 Students should have the ability to give feedback on what tools they want to have for the specific rooms, general comments and suggestions or feedback. I might add some kinde of voting system also.
 
+## Built on
 
-## Kanban
-### More cards will be added
-- [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
+- .Net core 3.1
+- Anguler
+- Typescript
+- Javascript
+- MVC
+- AspNet
+- Mysql
+- SQL
+- EntityFramework core
+
+### Project planning
+- [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1) - (More cards will be added)
 
 
-## Assets are from
+### Assets are from
 - [Font-awesome](https://fontawesome.com/)
 - [Bootstrap](https://getbootstrap.com/docs/4.0/utilities/flex/)
