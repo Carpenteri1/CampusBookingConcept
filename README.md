@@ -30,8 +30,7 @@ Students should have the ability to give feedback on what tools they want to hav
 - EntityFramework core
 
 ### Project planning
-- More cards will be added
-- [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
+- [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1) - (More cards will be added)
 
 
 ### Assets are from
