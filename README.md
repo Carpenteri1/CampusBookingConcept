@@ -12,6 +12,7 @@ The course ends by showing the results of the project to campus.
 - Projects is built on net core 3.1
 - Anguler
 - Typescript
+- Javascript
 - MVC
 - AspNet
 - Mysql
