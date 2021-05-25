@@ -29,11 +29,11 @@ Students should have the ability to give feedback on what tools they want to hav
 - SQL
 - EntityFramework core
 
-#### Kanban
-##### More cards will be added
+### Project planning
+- More cards will be added
 - [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1)
 
 
-#### Assets are from
+### Assets are from
 - [Font-awesome](https://fontawesome.com/)
 - [Bootstrap](https://getbootstrap.com/docs/4.0/utilities/flex/)
