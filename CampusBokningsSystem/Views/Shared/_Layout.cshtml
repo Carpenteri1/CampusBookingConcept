@@ -6,11 +6,12 @@
     <title>@ViewData["Title"] - CampusBokningsSystem</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("head",false)
 </head>
 <body>
     <div class="container-fluid">
         <main role="main" class="pb-3">
-            @RenderBody()
+                @RenderBody()
         </main>
     </div>
 
@@ -25,7 +26,7 @@
     <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/HomePage.js" asp-append-version="true"></script>
+    <script src="~/js/HomePage.js" defer asp-append-version="true"></script>
     <script src="~/js/BookingPage.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

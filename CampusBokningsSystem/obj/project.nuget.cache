@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I85JCmZCuvRWLDJzh65q9wOuv3PwXpyyRV6X62wf74cNA8Be4JqiOWE6Fn4OA/FwW3tcmdP4c+OQch/cNTueMg==",
+  "dgSpecHash": "Tztpg9659/sVUI+zDsKEd0YxZgu2Uy9DswITY2VVi2AZhYAm/+kD4NDo63EnuIuDtQWoKTjzJDWTWXR8yOBPEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nicla\\source\\repos\\CampusBokningsSystem\\CampusBokningsSystem\\CampusBokningsSystem.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\nicla\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\nicla\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\nicla\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\nicla\\.nuget\\packages\\microsoft.typescript.msbuild\\4.2.4\\microsoft.typescript.msbuild.4.2.4.nupkg.sha512",
     "C:\\Users\\nicla\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\nicla\\.nuget\\packages\\mysql.data\\8.0.25\\mysql.data.8.0.25.nupkg.sha512",
     "C:\\Users\\nicla\\.nuget\\packages\\mysql.entityframeworkcore\\5.0.3.1\\mysql.entityframeworkcore.5.0.3.1.nupkg.sha512",
