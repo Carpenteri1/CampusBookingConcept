@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.SpaServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,10 @@ namespace CampusBokningsSystem
             services.AddDbContext<CampusDbContext>(options =>
             options.UseMySQL(
             Configuration.GetConnectionString("LocalDB")));
-
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "AngulerClient";
+            });
             services.AddControllersWithViews();
             services.AddRazorPages();
             
@@ -50,9 +54,10 @@ namespace CampusBokningsSystem
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSpaStaticFiles();
 
             app.UseRouting();
+
 
             app.UseAuthorization();
  

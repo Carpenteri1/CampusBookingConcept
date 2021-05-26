@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="AngulerClient\src\assets\Files\Icons\arrow-down-sign-to-navigate.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\calendar.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\clock.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\home.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\info-button.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\next.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\pin.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\previous.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\students-cap.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\time.png" />
+    <Content Include="AngulerClient\src\assets\Files\Icons\campus_liggande_svart_trans.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>
@@ -15,6 +29,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.3.1" />
+    <PackageReference Include="RimuTec.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AngulerClient\src\assets\Files\Images\" />
+    <Folder Include="AngulerClient\src\info\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,53 @@
+﻿<div class="row p-2">
+    <div class="col-4">
+        <div class=" d-flex justify-content-start">
+            <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
+                <img src="{{icons.previousArrow}}" width="16" style="padding-bottom:0.2em;" />
+                Till Stundentportalen
+            </a>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="d-flex justify-content-center">
+            <img src="{{icons.campusIcon}}" width="250" />
+        </div>
+        <div class="d-flex justify-content-center">
+            <form class="form-row">
+                <div class="form-group " style="width:20em;">
+                    <h1 class="control-label text-center p-3" style="font-weight:700;">Schemasök</h1>
+                    <input type="text" value='Sök..' class="form-control searchfrominput">
+                    <div class="align-items-center d-flex justify-content-center">
+                        <button type="button" id="hideshowbutton" class="dropdownbutton">
+                            <img  src="{{icons.downArrow}}" height="16" /> &nbsp;Avancerad sökning
+                        </button>
+                    </div>
+                    <div id="expandingDiv">
+                        <h1>awesome title</h1>
+                        <p>Some awesome text and stuff</p>
+                    </div>
+                    <button type="submit" value="SÖK" class="w-100 mw-100 mt-3 searchformbutton">SÖK</button>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex pt-2 search-form-timedate">
+            <img src="{{icons.calendar}}" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
+            <div class="ml-auto search-form-timedate">
+                <img src="{{icons.clock}}" width="18" />&nbsp;&nbsp;<span id="LiveTime" style="font-size:0.8em;"></span>
+            </div>
+        </div>
+        <div class="d-flex pt-2 search-form-boking-ammount">
+            <div class="ml-auto">
+                <p>Antal bokningar: 0</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class=" d-flex justify-content-end">
+            <a class="btn" style="border:1px solid lightgrey;" href="">
+                Ny boking
+                <img src="{{icons.nextArrow}}" width="16" style="padding-bottom:0.2em;" />
+            </a>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,6 @@
     "module": "None"
   },
   "compileOnSave": true,
-  "exclude": [""],
+  "exclude": [""], 
   "include": [ "*.ts","wwwroot" ]
 }
