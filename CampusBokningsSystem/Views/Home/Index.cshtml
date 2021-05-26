@@ -2,96 +2,13 @@
 
 @section Scripts
 {
-    <script src="~/AngulerClient/polyfills.9ebbea7f242a2a3a9771.js"></script>
-    <script src="~/AngulerClient/runtime.7891eae7cb69044b8b1a.js"></script>
-    <script src="~/AngulerClient/main.9e2a77ddd988c9ff89cb.js" asp-append-version="true"></script>
+    <script src="~/AngularClient/polyfills.b5cc98dc5c48b8406e5b.js"></script>
+    <script src="~/AngularClient/runtime.35f159139dca69715587.js"></script>
+    <script src="~/AngularClient/main.b950043070a520255003.js" asp-append-version="true"></script>
 }
 @section head{
-    <link href="~/AngulerClient/styles.31d6cfe0d16ae931b73c.css" rel="stylesheet" />
+    <link href="~/AngularClient/styles.31d6cfe0d16ae931b73c.css" rel="stylesheet" />
 }
+
 <app-root></app-root>
-@*<AngulerInfo></AngulerInfo>
-
-    
-    <div class="row p-2">
-        <div class="col-4">
-            <div class=" d-flex justify-content-start">
-                <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
-                    <img src="~/Files/Icons/previous.png" width="16" style="padding-bottom:0.2em;" />
-                    Till Stundentportalen
-                </a>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="d-flex justify-content-center">
-                <img src="~/Files/Images/campus_liggande_svart_trans.png" width="250" />
-            </div>
-            <div class="d-flex justify-content-center">
-                <form class="form-row">
-                    <div class="form-group " style="width:20em;">
-                        <h1 class="control-label text-center p-3" style="font-weight:700;">Schemasök</h1>
-                        <input type="text" value='Sök..' class="form-control searchfrominput">
-                        <div class="align-items-center d-flex justify-content-center">
-                            <button type="button" id="hideshowbutton" class="dropdownbutton">
-                                <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" height="16" /> &nbsp;Avancerad sökning
-                            </button>
-                        </div>
-                        <div id="expandingDiv">
-                            <h1>awesome title</h1>
-                            <p>Some awesome text and stuff</p>
-                        </div>
-                        <button type="submit" value="SÖK" class="w-100 mw-100 mt-3 searchformbutton">SÖK</button>
-                    </div>
-                </form>
-            </div>
-            <div class="d-flex pt-2 search-form-timedate">
-                <img src="~/Files/Icons/calendar.png" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
-                <div class="ml-auto search-form-timedate">
-                    <img src="~/Files/Icons/clock.png" width="18" />&nbsp;&nbsp;<span id="LiveTime" style="font-size:0.8em;"></span>
-                </div>
-            </div>
-            <div class="d-flex pt-2 search-form-boking-ammount">
-                <p>@Html.CheckBox("noting", false) Visa även avslutade bokningar</p>
-                <div class="ml-auto">
-                    <p>Antal bokningar: 0</p>
-                </div>
-            </div>
-            @foreach (var s in Model)
-            {
-
-                if (s.location != null)
-                {
-                    <ul class="p-2 info-block">
-                        <li>
-                            <img src="~/Files/Icons/clock.png" width="24" />&nbsp;&nbsp;&nbsp;Time start - time end ######progress bar
-                        </li>
-                        <li>
-                            <img src="~/Files/Icons/home.png" width="24" />&nbsp;&nbsp;&nbsp;house location&nbsp;&nbsp;&nbsp;<img src="~/Files/Icons/pin.png" width="24">&nbsp;class room
-
-                        </li>
-                        <li>
-                            <img src="~/Files/Icons/students-cap.png" width="24" />&nbsp;&nbsp;&nbsp;class
-                        </li>
-                        <li id="HiddenListItem" class="pt-3">
-                            <img src="~/Files/Icons/info-button.png" width="24" />&nbsp;&nbsp;&nbsp;extra stuff and so on
-                        </li>
-                        <li class="align-items-center d-flex justify-content-center p-2">
-
-                            <img src="~/Files/Icons/arrow-down-sign-to-navigate.png" width="20" />
-                        </li>
-                    </ul>
-                }
-
-            }
-        </div>
-        <div class="col-4">
-            <div class=" d-flex justify-content-end">
-                <a class="btn" style="border:1px solid lightgrey;" href="@Url.Action("Index","Booking")">
-                    Ny boking
-                    <img src="~/Files/Icons/next.png" width="16" style="padding-bottom:0.2em;" />
-                </a>
-            </div>
-        </div>
-    </div>
-*@
+@*<AngulerInfo></AngulerInfo>*@

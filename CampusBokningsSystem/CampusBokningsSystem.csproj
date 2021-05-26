@@ -5,17 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="AngulerClient\src\assets\Files\Icons\arrow-down-sign-to-navigate.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\calendar.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\clock.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\home.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\info-button.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\next.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\pin.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\previous.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\students-cap.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\time.png" />
-    <Content Include="AngulerClient\src\assets\Files\Icons\campus_liggande_svart_trans.png" />
+    <Compile Remove="AngulerClient\**" />
+    <Compile Remove="wwwroot\assets\**" />
+    <Compile Remove="wwwroot\info\**" />
+    <Compile Remove="wwwroot\search\**" />
+    <Content Remove="AngulerClient\**" />
+    <Content Remove="wwwroot\assets\**" />
+    <Content Remove="wwwroot\info\**" />
+    <Content Remove="wwwroot\search\**" />
+    <EmbeddedResource Remove="AngulerClient\**" />
+    <EmbeddedResource Remove="wwwroot\assets\**" />
+    <EmbeddedResource Remove="wwwroot\info\**" />
+    <EmbeddedResource Remove="wwwroot\search\**" />
+    <None Remove="AngulerClient\**" />
+    <None Remove="wwwroot\assets\**" />
+    <None Remove="wwwroot\info\**" />
+    <None Remove="wwwroot\search\**" />
+    <TypeScriptCompile Remove="AngulerClient\**" />
+    <TypeScriptCompile Remove="wwwroot\assets\**" />
+    <TypeScriptCompile Remove="wwwroot\info\**" />
+    <TypeScriptCompile Remove="wwwroot\search\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,11 +39,6 @@
     </PackageReference>
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.3.1" />
     <PackageReference Include="RimuTec.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="AngulerClient\src\assets\Files\Images\" />
-    <Folder Include="AngulerClient\src\info\" />
   </ItemGroup>
 
 </Project>

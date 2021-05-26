@@ -67,12 +67,6 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.dll
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.pdb
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.genruntimeconfig.cache
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngulerClient\angular.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngulerClient\package-lock.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngulerClient\package.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngulerClient\tsconfig.app.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngulerClient\tsconfig.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.csprojAssemblyReference.cache
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.NodeServices.dll
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.dll
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.Extensions.dll
@@ -87,3 +81,9 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\RimuTec.AspNetCore.SpaServices.Extensions.dll
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\angular.json
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\package-lock.json
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\package.json
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.app.json
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.json
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.csprojAssemblyReference.cache

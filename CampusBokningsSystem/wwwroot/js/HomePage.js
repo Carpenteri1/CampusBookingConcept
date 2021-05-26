@@ -1,6 +1,15 @@
 ﻿/*
 let infoBlockArray = $(".info-block").toArray();
 
+function HideShowAdvancedSearch() {
+    let expandingDiv = $("#expandingDiv").hide();
+
+    $("#hideshowbutton").click(function () {
+        expandingDiv.toggle("slow");
+    });
+}
+
+
 $(document)
     .ready(SetIdAndHide)
     .ready(CurrentTime)

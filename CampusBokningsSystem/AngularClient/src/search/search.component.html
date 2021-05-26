@@ -1,4 +1,5 @@
-﻿<div class="row p-2">
+﻿
+<div class="row p-2">
     <div class="col-4">
         <div class=" d-flex justify-content-start">
             <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
@@ -18,11 +19,11 @@
                     <h1 class="control-label text-center p-3" style="font-weight:700;">Schemasök</h1>
                     <input type="text" value='Sök..' class="form-control searchfrominput">
                     <div class="align-items-center d-flex justify-content-center">
-                        <button type="button" id="hideshowbutton" class="dropdownbutton">
-                            <img  src="{{icons.downArrow}}" height="16" /> &nbsp;Avancerad sökning
+                        <button type="button" id="hideshowbutton" class="dropdownbutton" (click)="toggleAvancedSearch()">
+                            <img src="{{icons.downArrow}}" height="16" (click)='toggleAvancedSearch()' /> &nbsp;{{showAdvancedSearch ? 'Göm' : 'Visa'}}  avancerad sökning
                         </button>
                     </div>
-                    <div id="expandingDiv">
+                    <div *ngIf="showAdvancedSearch">
                         <h1>awesome title</h1>
                         <p>Some awesome text and stuff</p>
                     </div>
@@ -31,16 +32,35 @@
             </form>
         </div>
         <div class="d-flex pt-2 search-form-timedate">
-            <img src="{{icons.calendar}}" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;@DateTime.Now.ToString("dddd dd MMMM")
+            <img src="{{icons.calendar}}" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;{{currentDate}}
             <div class="ml-auto search-form-timedate">
-                <img src="{{icons.clock}}" width="18" />&nbsp;&nbsp;<span id="LiveTime" style="font-size:0.8em;"></span>
+                <img src="{{icons.clock}}" width="18" />&nbsp;&nbsp;<span style="font-size:0.8em;">{{time.hours}}:{{time.minutes}}:{{time.sec}}</span>
             </div>
         </div>
         <div class="d-flex pt-2 search-form-boking-ammount">
+            <div><p>Visa även avlutade bokningar <input type="checkbox" /></p></div>
             <div class="ml-auto">
-                <p>Antal bokningar: 0</p>
+                <p>Antal bokningar: {{testdataLenght}}</p>
             </div>
         </div>
+        <ul class="p-2 info-block" *ngFor='let data of testData'>
+            <li>
+                <img src="{{icons.clock}}" width="24" />&nbsp;&nbsp;&nbsp;Time start - time end ######progress bar
+            </li>
+            <li>
+                <img src="{{icons.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.pin}}" width="24">&nbsp;class room
+            </li>
+            <li>
+                <img src="{{icons.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.class}}
+            </li>
+            <li *ngIf="showMoreInfo" class="pt-3">
+                <img src="{{icons.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.info}}
+            </li>
+            <li class="align-items-center d-flex justify-content-center p-2">
+
+                <img src="{{icons.downArrow}}"(click)='toggleShowMoreInfo()' width="20" />
+            </li>
+        </ul>
     </div>
     <div class="col-4">
         <div class=" d-flex justify-content-end">
