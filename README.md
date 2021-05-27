@@ -1,4 +1,4 @@
-# Campus Booking Concept
+# Campus Booking Client
 
 
 ## About
