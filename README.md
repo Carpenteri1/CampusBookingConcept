@@ -9,6 +9,12 @@ Iv hade meetings with the staff and gathered suggestions and feedback on what th
 The meeting have been done via teams and mail do to the current corona pandemic. 
 The course ends by showing the results of the project to campus.
 
+This project is the Client, i can call the API project with
+- get
+- post
+- put
+- delete
+
 ## Goal
 Make an updated concept for there current booking system. 
 first and foremost campus wants the ability to let students book study rooms.
