@@ -21,17 +21,17 @@ Students should have the ability to give feedback on what tools they want to hav
 
 - .Net core 3.1
 - Anguler
+- C#
 - Typescript
 - Javascript
 - MVC
 - AspNet
-- Mysql
-- SQL
-- EntityFramework core
+- AdoNet
+- Crud code
 
 ### Project planning
 - [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1) - (More cards will be added)
-
+- [API Project](https://github.com/Carpenteri1/CampusBookingAPI/blob/master/README.md)
 
 ### Assets are from
 - [Font-awesome](https://fontawesome.com/)
