@@ -1,0 +1,77 @@
+﻿
+    <div class="row p-2">
+        <div class="col-4">
+            <div class=" d-flex justify-content-start">
+                <a class="btn" style="border:1px solid lightgrey;" href="http://student.varberg.se/kiosk/">
+                    <img src="{{icons.assets.previousArrow}}" width="16" style="padding-bottom:0.2em;" />
+                    Till Stundentportalen
+                </a>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="d-flex justify-content-center">
+                <img src="{{icons.assets.campusIcon}}" width="250" />
+            </div>
+            <div class="d-flex justify-content-center">
+                <form class="form-row">
+                    <div class="form-group " style="width:20em;">
+                        <h1 class="control-label text-center p-3" style="font-weight:700;">Schemasök</h1>
+                        <input type="text" value='Sök..' class="form-control searchfrominput">
+                        <div class="align-items-center d-flex justify-content-center">
+                            <button type="button" id="hideshowbutton" class="dropdownbutton" (click)="toggleAvancedSearch()">
+                                <img src="{{icons.assets.downArrow}}" height="16" (click)='toggleAvancedSearch()' /> &nbsp;{{showAdvancedSearch ? 'Göm' : 'Visa'}}  avancerad sökning
+                            </button>
+                        </div>
+                        <div *ngIf="showAdvancedSearch">
+                            <h1>awesome title</h1>
+                            <p>Some awesome text and stuff</p>
+                        </div>
+                        <button type="submit" value="SÖK" class="w-100 mw-100 mt-3 searchformbutton">SÖK</button>
+                    </div>
+                </form>
+            </div>
+            <div class="d-flex pt-2 search-form-current-TimeDate">
+                <img src="{{icons.assets.calendar}}" width="16" style="margin-top: 0.3em;" height="20" />&nbsp;&nbsp;{{currentDate}}
+                <div class="ml-auto search-form-current-TimeDate">
+                    <img src="{{icons.assets.clock}}" width="18" />&nbsp;&nbsp;<span style="font-size:0.8em;">{{time.hours}}:{{time.minutes}}:{{time.sec}}</span>
+                </div>
+            </div>
+            <div class="d-flex pt-2">
+                <div class="d-flex flex-row"><p>Visa även avlutade bokningar</p> <input type="checkbox" style="margin-top:3.2%;margin-left:0.5em;" /></div>
+                <div class="ml-auto">
+                    <p>Antal bokningar: {{testdataLenght}}</p>
+                </div>
+            </div>
+            <ul class="p-2 info-block" *ngFor="let d of data.dataArray">
+                <li>
+                    <div class="d-flex search-form-timedate">
+                        <img src="{{icons.assets.clock}}" width="24" height="24" style="margin-top:0.8%;" /><p>&nbsp;&nbsp;&nbsp;{{d.timeStart}} - {{d.timeEnd}}</p>
+                        <div class="ml-auto" id="myProgress">
+                            <div id="myBar"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{icons.assets.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{d.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.assets.pin}}" width="24">&nbsp;class room
+                </li>
+                <li>
+                    <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{d.className}}
+                </li>
+                <li *ngIf="showMoreInfo" class="pt-3">
+                    <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{d.info}}
+                </li>
+                <li class="align-items-center d-flex justify-content-center p-2">
+                    <img src="{{icons.assets.downArrow}}" (click)='toggleShowMoreInfo()' width="20" />
+                </li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <div class=" d-flex justify-content-end">
+                <a class="btn" style="border:1px solid lightgrey;" href="">
+                    Ny boking
+                    <img src="{{icons.assets.nextArrow}}" width="16" style="padding-bottom:0.2em;" />
+                </a>
+            </div>
+        </div>
+    </div>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusBokningsSystem", "CampusBokningsSystem\CampusBokningsSystem.csproj", "{D0C4DB1D-3D2F-4B4E-AFA4-99CC6B4BB1DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampusBokningsSystem", "CampusBokningsSystem\CampusBokningsSystem.csproj", "{D0C4DB1D-3D2F-4B4E-AFA4-99CC6B4BB1DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampusBookingAPI", "..\CampusBookingAPI\CampusBookingAPI\CampusBookingAPI.csproj", "{D20C2EA2-9285-45EB-9C62-BCC8E4D230D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D0C4DB1D-3D2F-4B4E-AFA4-99CC6B4BB1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C4DB1D-3D2F-4B4E-AFA4-99CC6B4BB1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C4DB1D-3D2F-4B4E-AFA4-99CC6B4BB1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20C2EA2-9285-45EB-9C62-BCC8E4D230D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20C2EA2-9285-45EB-9C62-BCC8E4D230D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20C2EA2-9285-45EB-9C62-BCC8E4D230D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20C2EA2-9285-45EB-9C62-BCC8E4D230D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -50,9 +50,6 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.TagHelpers.input.cache
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.TagHelpers.output.cache
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.RazorCoreGenerate.cache
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Booking\Class.cshtml.g.cs
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Booking\Index.cshtml.g.cs
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Booking\Student.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

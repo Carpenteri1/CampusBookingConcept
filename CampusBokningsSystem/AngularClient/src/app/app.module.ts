@@ -1,20 +1,30 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { SearchComponent } from '../search/search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info.component';
+import { IconList } from './services/search/iconsList.service';
+import { TestData } from './services/testdata.service';
+import SearchView from './view/search/search.component';
+
 
 @NgModule({
   declarations: [
-        AppComponent,InfoComponent,SearchComponent
+        AppComponent,
+        InfoComponent,
+        SearchView  
+        
   ],
   imports: [
-    BrowserModule,FormsModule
+      BrowserModule,
+      FormsModule,
+      HttpClientModule,
+      
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [TestData,IconList],
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }
