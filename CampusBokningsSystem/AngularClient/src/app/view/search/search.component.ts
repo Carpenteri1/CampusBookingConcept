@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import { IconList } from '../../services/search/iconsList.service';
 import { TestData } from '../../services/testdata.service';
 
@@ -17,11 +17,11 @@ export default class SearchView implements OnInit {
  
     testdataLenght = 0;
     time =
-    {
-        hours: new Date().getHours(),
-        minutes: new Date().getMinutes(), 
-        sec: new Date().getSeconds()
-    }
+        {
+            hours: new Date().getHours(),
+            minutes: new Date().getMinutes(),
+            sec: new Date().getSeconds()
+        }
 
     currentDate = new Date().toLocaleDateString();
     currentTime = new Date().toLocaleTimeString();
@@ -40,7 +40,6 @@ export default class SearchView implements OnInit {
          this.data
              .fetchData()
              .subscribe();
-      
      }
     updateTime()
     {

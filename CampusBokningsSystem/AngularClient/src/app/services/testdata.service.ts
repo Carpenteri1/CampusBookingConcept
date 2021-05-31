@@ -1,6 +1,8 @@
 ﻿import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
+import { ITestDataModel } from "../shared/ITestDataModel";
 
 @Injectable()
 export class TestData {
@@ -9,39 +11,12 @@ export class TestData {
     {
 
     }
-    public dataArray : any = [];
-    fetchData() {
+    public dataArray: ITestDataModel[] = [];
+    fetchData() : Observable<void> {
         return this.http.get<[]>(this.apiUrl)
             .pipe(map(getData => {
                 this.dataArray = getData;
-                return this.dataArray;
+                return;
             }));
     }
-
-    /*public data = [
-        {
-            className: "sut-19",
-            timeStart: new Date(2021, 2, 22, 18, 30, 0).getHours() + ":" + new Date(2021, 2, 22, 18, 30, 0).getMinutes(),
-            timeEnd: new Date(2021, 2, 22, 20, 0, 0).getHours() + ":" + new Date(2021, 2, 22, 20, 0, 0).getMinutes(),
-            info: "Redovisning",
-            location: "B-hus",
-            room: "B-202"
-        },
-        {
-            className: "sut-20",
-            timeStart: new Date(2021, 2, 23, 15, 0, 0).getHours() + ":" + new Date(2021, 2, 23, 15, 0, 0).getMinutes(),
-            timeEnd: new Date(2021, 2, 23, 17, 0, 0).getHours() + ":" + new Date(2021, 2, 23, 17, 0, 0).getMinutes(),
-            info: "Mjukvaruutveckling",
-            location: "C-hus",
-            room: "c-356"
-        },
-        {
-            className: "sut-18",
-            timeStart: new Date(2021, 2, 25, 11, 0, 0).getHours() + ":" + new Date(2021, 2, 25, 11, 0, 0).getMinutes(),
-            timeEnd: new Date(2021, 2, 25, 14, 0, 0).getHours() + ":" + new Date(2021, 2, 25, 14, 0, 0).getMinutes(),
-            info: "studiebesök",
-            location: "A-hus",
-            room: "A-101"
-        }
-    ];*/
 }

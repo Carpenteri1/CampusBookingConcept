@@ -9,6 +9,7 @@ import { InfoComponent } from './info.component';
 import { IconList } from './services/search/iconsList.service';
 import { TestData } from './services/testdata.service';
 import SearchView from './view/search/search.component';
+import router from '../router';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import SearchView from './view/search/search.component';
       BrowserModule,
       FormsModule,
       HttpClientModule,
+      router
       
   ],
   providers: [TestData,IconList],
