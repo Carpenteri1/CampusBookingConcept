@@ -36,7 +36,7 @@ Students should have the ability to give feedback on what tools they want to hav
 - Crud code
 
 ### Project planning
-- [Progress](https://github.com/Carpenteri1/CampusBookingConcept/projects/1) - (More cards will be added)
+- [Progress](https://github.com/users/Carpenteri1/projects/7) - (More cards will be added)
 - [API Project](https://github.com/Carpenteri1/CampusBookingAPI)
 
 ### Assets are from
