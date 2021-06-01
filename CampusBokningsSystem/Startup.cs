@@ -1,4 +1,3 @@
-using CampusBokningsSystem.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,9 +26,6 @@ namespace CampusBokningsSystem
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CampusDbContext>(options =>
-            options.UseMySQL(
-            Configuration.GetConnectionString("LocalDB")));
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "AngulerClient";

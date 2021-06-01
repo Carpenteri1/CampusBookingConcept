@@ -1,5 +1,4 @@
 ﻿using CampusBokningsSystem.Models;
-using CampusBokningsSystem.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,11 +12,9 @@ namespace CampusBokningsSystem.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly CampusDbContext dbcontext;
-        public HomeController(ILogger<HomeController> logger, CampusDbContext dbcontext)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            this.dbcontext = dbcontext;
         }
 
         [HttpGet]
@@ -26,7 +23,6 @@ namespace CampusBokningsSystem.Controllers
             var resources = new List<Resources>();
             try
             {
-                 resources = dbcontext.resources.ToList();
             }
             catch(Exception e)
             {
@@ -35,6 +31,7 @@ namespace CampusBokningsSystem.Controllers
 
             return View(resources);
         }
+
 
         public IActionResult Privacy()
         {

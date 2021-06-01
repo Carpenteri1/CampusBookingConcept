@@ -1,4 +1,5 @@
 import {Component, OnInit } from '@angular/core';
+import { Rooms } from '../../services/models/Rooms';
 import { IconList } from '../../services/search/iconsList.service';
 import { TestData } from '../../services/testdata.service';
 
@@ -10,7 +11,7 @@ import { TestData } from '../../services/testdata.service';
 })
 export default class SearchView implements OnInit {
     icons: IconList = new IconList();
-    constructor(public data: TestData,private assets:IconList) {
+    constructor(public roomData: Rooms,private assets:IconList) {
         this.icons.assets = assets.assets;
     }
   
@@ -37,7 +38,7 @@ export default class SearchView implements OnInit {
 
      ngOnInit(): void {
         this.updateTime();
-         this.data
+         this.roomData
              .fetchData()
              .subscribe();
      }
