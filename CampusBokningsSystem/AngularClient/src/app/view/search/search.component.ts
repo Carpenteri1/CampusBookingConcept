@@ -1,8 +1,10 @@
-import {Component, OnInit } from '@angular/core';
-import { Rooms } from '../../services/models/Rooms';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule, formatDate } from '@angular/common'
+import { Observable } from 'rxjs';
+import { Bookings, FetchData, IBooking } from '../../services/models/Bookings';
+import { IRooms, Rooms } from '../../services/models/Rooms';
 import { IconList } from '../../services/search/iconsList.service';
 import { TestData } from '../../services/testdata.service';
-
 
 @Component({
     selector: 'search-component',
@@ -11,11 +13,16 @@ import { TestData } from '../../services/testdata.service';
 })
 export default class SearchView implements OnInit {
     icons: IconList = new IconList();
-    constructor(public roomData: Rooms,private assets:IconList) {
+    public bookingObject: IBooking[] = [];
+    public roomObjects: IRooms[] = [];
+    dataObject: any[] = [];
+    constructor(public roomData: Rooms,assets:IconList,public apiData:FetchData) {
         this.icons.assets = assets.assets;
     }
-  
- 
+    
+
+
+
     testdataLenght = 0;
     time =
         {
@@ -36,12 +43,6 @@ export default class SearchView implements OnInit {
         this.showMoreInfo = !this.showMoreInfo;
     }
 
-     ngOnInit(): void {
-        this.updateTime();
-         this.roomData
-             .fetchData()
-             .subscribe();
-     }
     updateTime()
     {
         setInterval(() => { 
@@ -50,5 +51,19 @@ export default class SearchView implements OnInit {
             this.time.hours = new Date().getHours();
         }, 1000);
     }
+    
+  
 
+    ngOnInit(): void {
+        this.updateTime(); 
+        this.apiData.getBookingData().subscribe(data => {
+            this.bookingObject = data; // setup logic here
+            this.testdataLenght = data.length;
+            for (let i = 0; i < data.length; i++) {
+               
+                this.bookingObject[i].timeStart = formatDate(this.bookingObject[i].dateStart, "h:mm:ss a z","en-US'");
+                this.bookingObject[i].timeEnd = formatDate(this.bookingObject[i].dateEnd, "h:mm:ss a z", "en-US'");
+            }
+        })
+    }    
 }

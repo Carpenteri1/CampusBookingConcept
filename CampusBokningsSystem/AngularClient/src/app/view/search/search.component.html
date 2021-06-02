@@ -43,28 +43,31 @@
                     <p>Antal bokningar: {{testdataLenght}}</p>
                 </div>
             </div>
-            <ul class="p-2 info-block" *ngFor="let d of roomData.dataArray">
-                <li>
-                    <div class="d-flex search-form-timedate">
-                        <img src="{{icons.assets.clock}}" width="24" height="24" style="margin-top:0.8%;" /><p>&nbsp;&nbsp;&nbsp;starttid - sluttid</p>
-                        <div class="ml-auto" id="myProgress">
-                            <div id="myBar"></div>
+            <div *ngFor="let data of bookingObject">
+                <ul class="p-2 info-block">
+                    <li>
+                        <div class="d-flex search-form-timedate">
+                            <img src="{{icons.assets.clock}}" width="24" height="24" style="margin-top:0.8%;" /><p>&nbsp;&nbsp;&nbsp;{{data.timeStart}} - {{data.timeEnd}}</p>
+                            <div class="ml-auto" id="myProgress">
+                                <div id="myBar"></div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="{{icons.assets.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{d.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.assets.pin}}" width="24">&nbsp;{{d.roomName}}
-                </li>
-                <li>
-                    <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;skolklass namn
-                </li>
-                <li *ngIf="showMoreInfo" class="pt-3">
-                    <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{d.description}}
-                </li>
-                <li class="align-items-center d-flex justify-content-center p-2">
-                    <img src="{{icons.assets.downArrow}}" (click)='toggleShowMoreInfo()' width="20" />
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <img src="{{icons.assets.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.assets.pin}}" width="24">&nbsp;{{data.room.roomName}}
+                    </li>
+                    <li>
+                        <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.className}}
+                    </li>
+                    <li *ngIf="showMoreInfo" class="pt-3">
+                        <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
+                    </li>
+                    <li class="align-items-center d-flex justify-content-center p-2">
+                        <img src="{{icons.assets.downArrow}}" (click)='toggleShowMoreInfo()' width="20" />
+                    </li>
+                </ul>
+            </div>
+        
         </div>
         <div class="col-4">
             <div class=" d-flex justify-content-end">

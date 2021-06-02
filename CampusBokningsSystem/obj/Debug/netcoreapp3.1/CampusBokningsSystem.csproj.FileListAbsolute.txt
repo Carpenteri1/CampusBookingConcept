@@ -40,7 +40,6 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.RazorCoreGenerate.cache
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -71,4 +70,4 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\package.json
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.app.json
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.json
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.csprojAssemblyReference.cache
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

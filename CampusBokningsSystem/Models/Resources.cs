@@ -77,7 +77,7 @@ namespace CampusBokningsSystem.Models
         [Column(TypeName = "smallint")]
         public int? resource_status_reason_id { get; set; }
         [Column(TypeName = "int")]
-        public int? buffer_time { get;set; }
+        public int? buffer_time { get; set; }
 #nullable disable
         [Column(TypeName = "tinyint")]
         public byte enable_check_in { get; set; }

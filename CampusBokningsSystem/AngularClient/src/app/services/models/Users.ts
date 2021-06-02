@@ -7,6 +7,4 @@ export class Users {
     userName: string | undefined;
     password: string | undefined;
     typeOfAccount: TypeOfAccount | undefined;
-    bookings?: Set<Bookings>;
-    rating?: Set<Rating>;
 }

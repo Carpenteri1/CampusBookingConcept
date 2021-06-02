@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import SearchView from './view/search/search.component';
 import router from '../router';
 import BookingView from './view/bookings/booking.component';
 import { Rooms } from './services/models/Rooms';
+import { Bookings, FetchData } from './services/models/Bookings';
 
 
 @NgModule({
@@ -23,12 +24,15 @@ import { Rooms } from './services/models/Rooms';
   imports: [
       BrowserModule,
       HttpClientModule,
+      HttpClientJsonpModule,
       router,      
   ],
     providers: [
         TestData,
         IconList,
-        Rooms
+        Rooms,
+        Bookings,
+        FetchData
     ],
   bootstrap: [AppComponent]
 })
