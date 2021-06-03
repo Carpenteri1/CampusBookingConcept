@@ -45,8 +45,8 @@ export interface IBooking {
     id: number;
     dateStart: Date;
     dateEnd: Date;
-    timeStart: string;
-    timeEnd: string;
+    timeStart?: string;
+    timeEnd?: string;
     className?: string;
     seatsBooked?: number;
     room: IRooms;

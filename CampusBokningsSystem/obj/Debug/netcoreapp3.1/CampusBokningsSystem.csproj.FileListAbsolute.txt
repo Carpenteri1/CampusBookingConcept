@@ -71,3 +71,4 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.app.json
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\bin\Debug\netcoreapp3.1\AngularClient\tsconfig.json
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\obj\Debug\netcoreapp3.1\CampusBokningsSystem.csprojAssemblyReference.cache

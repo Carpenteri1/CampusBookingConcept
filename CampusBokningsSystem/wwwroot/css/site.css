@@ -6,7 +6,9 @@ for details on configuring this project to bundle and minify static web assets. 
     display: flex;
     justify-content: space-between;
 }
-
+.makeSpace{
+    height:6em;
+}
 #myBar {
     background-color: rgba(170, 220, 220, 1.0);
     width: 40%;
