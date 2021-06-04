@@ -9,6 +9,13 @@ for details on configuring this project to bundle and minify static web assets. 
 .makeSpace{
     height:6em;
 }
+.center-booking-components {
+    display: table;
+    margin: auto;
+}
+label {
+    font-weight: 600;
+}
 #myBar {
     background-color: rgba(170, 220, 220, 1.0);
     width: 40%;

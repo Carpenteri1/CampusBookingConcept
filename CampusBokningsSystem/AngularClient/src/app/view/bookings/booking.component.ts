@@ -21,13 +21,16 @@ export default class BookingView implements OnInit{
 
 
     public bookingForm = this.formBuilder.group({
-        dateStart: '',
-        dateEnd: '',
+        dateStart:'',
+        timeStart: '',
+        timeEnd: '',
         className:'',
         seatsBooked: '',
         roomName: '',
         roomId: '',
-        user:'',
+        user: '',
+        password:'',
+        userId:'',
     });
 
     /*
@@ -72,13 +75,16 @@ export default class BookingView implements OnInit{
 
         this.seatsAvailable = this.roomObjects.find(item => item.roomName == this.bookingForm.value.roomName)?.seating;
         this.seatingList = [];//reset seating list
-        console.log("list is clear and length is now "  + this.seatingList.length)
 
-        for (let i = 0; i < Number(this.seatsAvailable); i++) {
+        for (let i = 0; i <= Number(this.seatsAvailable); i++) {
             this.seatingList[i] = i;
         }
+
+
+
+
         //for testing only
-        console.log("Seats available " + this.seatsAvailable + " seat list lengt " + this.seatingList.length)
+        console.log("Seats available " + this.seatsAvailable)
     }
     ngOnInit(): void {
         this.apiData.getRoomData().subscribe(data => {

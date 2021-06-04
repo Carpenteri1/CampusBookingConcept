@@ -43,10 +43,8 @@ export class FetchData
 
 export interface IBooking {
     id: number;
-    dateStart: Date;
-    dateEnd: Date;
-    timeStart?: string;
-    timeEnd?: string;
+    timeStart: Date;
+    timeEnd: Date;
     className?: string;
     seatsBooked?: number;
     room: IRooms;

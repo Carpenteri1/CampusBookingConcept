@@ -59,11 +59,6 @@ export default class SearchView implements OnInit {
         this.apiData.getBookingData().subscribe(data => {
             this.bookingObject = data; // setup logic here
             this.testdataLenght = data.length;
-            for (let i = 0; i < data.length; i++) {
-               
-                this.bookingObject[i].timeStart = formatDate(this.bookingObject[i].dateStart, "h:mm:ss a z","en-US'");
-                this.bookingObject[i].timeEnd = formatDate(this.bookingObject[i].dateEnd, "h:mm:ss a z", "en-US'");
-            }
         })
     }    
 }
