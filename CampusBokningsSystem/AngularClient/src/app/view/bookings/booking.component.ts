@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { IconList } from '../../services/search/iconsList.service';
+import { IconList } from '../../services/data/iconsList.service';
 import { TestData } from '../../services/testdata.service';
 import { ITestDataModel } from '../../shared/ITestDataModel';
 import { FormBuilder, FormControl } from '@angular/forms';
@@ -13,12 +13,9 @@ import { IRooms } from '../../services/models/Rooms';
     styleUrls: []
 })
 export default class BookingView implements OnInit{
-    icons: IconList = new IconList();
     public roomObjects: IRooms[] = [];
     public seatingList: number[] = [];
     seatsAvailable: any;
-
-
 
     public bookingForm = this.formBuilder.group({
         dateStart:'',
@@ -58,8 +55,8 @@ export default class BookingView implements OnInit{
     seatsBooked?: number;
     room: IRooms;
     user: number;*/
-    constructor(private formBuilder: FormBuilder, public assets: IconList,public apiData:FetchData) {
-        this.icons.assets = assets.assets;
+    constructor(private formBuilder: FormBuilder, public icons: IconList, private apiData: FetchData) {
+
     }
     onSubmit() {
 

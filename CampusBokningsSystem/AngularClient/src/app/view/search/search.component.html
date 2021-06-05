@@ -60,7 +60,10 @@
                         <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.className}}
                     </li>
                     <li *ngIf="showMoreInfo" class="pt-3">
-                        <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
+                            <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
+                    </li>
+                    <li *ngIf="showMoreInfo">
+                        <a routerLink="Kommentarer/{{data.id}}" class="btn">Se kommenterar</a>
                     </li>
                     <li class="align-items-center d-flex justify-content-center p-2">
                         <img src="{{icons.assets.downArrow}}" (click)='toggleShowMoreInfo()' width="20" />
@@ -71,7 +74,7 @@
         </div>
         <div class="col-4">
             <div class=" d-flex justify-content-end">
-                <a class="btn" style="border:1px solid lightgrey;" routerLink="bokning">
+                <a class="btn" style="border:1px solid lightgrey;" routerLink="/NyBokning">
                     Ny boking
                     <img src="{{icons.assets.nextArrow}}" width="16" style="padding-bottom:0.2em;" />
                 </a>

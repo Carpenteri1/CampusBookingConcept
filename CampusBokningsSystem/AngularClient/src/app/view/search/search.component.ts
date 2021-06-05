@@ -3,7 +3,7 @@ import { CommonModule, formatDate } from '@angular/common'
 import { Observable } from 'rxjs';
 import { Bookings, FetchData, IBooking } from '../../services/models/Bookings';
 import { IRooms, Rooms } from '../../services/models/Rooms';
-import { IconList } from '../../services/search/iconsList.service';
+import { IconList } from '../../services/data/iconsList.service';
 import { TestData } from '../../services/testdata.service';
 
 @Component({
@@ -12,12 +12,10 @@ import { TestData } from '../../services/testdata.service';
     styleUrls: []
 })
 export default class SearchView implements OnInit {
-    icons: IconList = new IconList();
     public bookingObject: IBooking[] = [];
     public roomObjects: IRooms[] = [];
     dataObject: any[] = [];
-    constructor(public roomData: Rooms,assets:IconList,public apiData:FetchData) {
-        this.icons.assets = assets.assets;
+    constructor(public roomData: Rooms,public icons:IconList,private apiData:FetchData) {
     }
     
 

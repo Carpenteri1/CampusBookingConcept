@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info.component';
-import { IconList } from './services/search/iconsList.service';
+import { IconList } from './services/data/iconsList.service';
 import { TestData } from './services/testdata.service';
 import SearchView from './view/search/search.component';
 import router from '../router';
@@ -15,6 +13,7 @@ import { Bookings, FetchData } from './services/models/Bookings';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { CommentsView } from './view/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +21,7 @@ import { MatOptionModule } from '@angular/material/core';
         InfoComponent,
         SearchView,
         BookingView,
+        CommentsView
   ],
   imports: [
       BrowserModule,
