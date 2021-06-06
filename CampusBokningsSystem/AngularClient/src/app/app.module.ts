@@ -8,12 +8,11 @@ import { TestData } from './services/testdata.service';
 import SearchView from './view/search/search.component';
 import router from '../router';
 import BookingView from './view/bookings/booking.component';
-import { Rooms } from './services/models/Rooms';
-import { Bookings, FetchData } from './services/models/Bookings';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { CommentsView } from './view/comments/comments.component';
+import { FetchData } from './services/data/fetchData';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,6 @@ import { CommentsView } from './view/comments/comments.component';
     providers: [
         TestData,
         IconList,
-        Rooms,
-        Bookings,
         FetchData
     ],
   bootstrap: [AppComponent]

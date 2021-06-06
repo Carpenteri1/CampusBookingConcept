@@ -1,11 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { IconList } from '../../services/data/iconsList.service';
-import { TestData } from '../../services/testdata.service';
-import { ITestDataModel } from '../../shared/ITestDataModel';
-import { FormBuilder, FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { FetchData } from '../../services/models/Bookings';
-import { IRooms } from '../../services/models/Rooms';
+import { FormBuilder } from '@angular/forms';
+import { IRooms } from '../../services/models/IRooms';
+import { FetchData } from '../../services/data/fetchData';
 
 @Component({
     selector: 'Booking-component',
@@ -16,6 +13,12 @@ export default class BookingView implements OnInit{
     public roomObjects: IRooms[] = [];
     public seatingList: number[] = [];
     seatsAvailable: any;
+
+
+    constructor(private formBuilder: FormBuilder, public icons: IconList, private apiData: FetchData) {
+
+    }
+
 
     public bookingForm = this.formBuilder.group({
         dateStart:'',
@@ -55,9 +58,7 @@ export default class BookingView implements OnInit{
     seatsBooked?: number;
     room: IRooms;
     user: number;*/
-    constructor(private formBuilder: FormBuilder, public icons: IconList, private apiData: FetchData) {
 
-    }
     onSubmit() {
 
         console.log("submitted and name is " + this.bookingForm.value.roomName + " seatsbooked " + this.bookingForm.value.seatsBooked)

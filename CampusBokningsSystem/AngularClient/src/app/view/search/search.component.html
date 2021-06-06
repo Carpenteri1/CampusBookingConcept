@@ -63,7 +63,7 @@
                             <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
                     </li>
                     <li *ngIf="showMoreInfo">
-                        <a routerLink="Kommentarer/{{data.id}}" class="btn">Se kommenterar</a>
+                        <a routerLink="Kommentarer/{{data.room.id}}" class="btn">Se kommenterar</a>
                     </li>
                     <li class="align-items-center d-flex justify-content-center p-2">
                         <img src="{{icons.assets.downArrow}}" (click)='toggleShowMoreInfo()' width="20" />

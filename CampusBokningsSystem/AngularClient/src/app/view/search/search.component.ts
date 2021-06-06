@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, formatDate } from '@angular/common'
 import { Observable } from 'rxjs';
-import { Bookings, FetchData, IBooking } from '../../services/models/Bookings';
-import { IRooms, Rooms } from '../../services/models/Rooms';
+
 import { IconList } from '../../services/data/iconsList.service';
 import { TestData } from '../../services/testdata.service';
+import { FetchData } from '../../services/data/fetchData';
+import { IRooms } from '../../services/models/IRooms';
+import { IBooking } from '../../services/models/IBookings';
 
 @Component({
     selector: 'search-component',
@@ -15,7 +17,7 @@ export default class SearchView implements OnInit {
     public bookingObject: IBooking[] = [];
     public roomObjects: IRooms[] = [];
     dataObject: any[] = [];
-    constructor(public roomData: Rooms,public icons:IconList,private apiData:FetchData) {
+    constructor(public icons:IconList,private apiData:FetchData) {
     }
     
 
