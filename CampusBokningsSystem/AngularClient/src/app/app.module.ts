@@ -13,6 +13,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { CommentsView } from './view/comments/comments.component';
 import { FetchData } from './services/data/fetchData';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FetchData } from './services/data/fetchData';
         InfoComponent,
         SearchView,
         BookingView,
-        CommentsView
+        CommentsView,
+
   ],
   imports: [
       BrowserModule,
@@ -29,8 +32,9 @@ import { FetchData } from './services/data/fetchData';
       FormsModule,
       ReactiveFormsModule,
       MatSelectModule,
-      MatOptionModule
-      
+      MatOptionModule,
+      BrowserAnimationsModule,
+      Ng2SearchPipeModule
   ],
     providers: [
         TestData,
