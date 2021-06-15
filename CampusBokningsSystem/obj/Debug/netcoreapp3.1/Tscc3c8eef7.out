@@ -14,10 +14,14 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularCli
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IComments.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IRooms.js
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IRooms.js.map
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\enums\TypeOfAccount.js
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\enums\TypeOfAccount.js.map
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IUsers.js
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IUsers.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IBookings.js
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IBookings.js.map
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\data\fetchData.js
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\data\fetchData.js.map
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\data\apiConnection.service.js
+C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\data\apiConnection.service.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\view\search\search.component.js
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\view\search\search.component.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\view\bookings\booking.component.js
@@ -34,10 +38,6 @@ C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularCli
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\main.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\polyfills.js
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\polyfills.js.map
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\enums\TypeOfAccount.js
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\enums\TypeOfAccount.js.map
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IUsers.js
-C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\services\models\IUsers.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\view\DigitalClock\clock.component.js
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\app\view\DigitalClock\clock.component.js.map
 C:\Users\nicla\source\repos\CampusBokningsSystem\CampusBokningsSystem\AngularClient\dist\out-tsc\environments\environment.prod.js

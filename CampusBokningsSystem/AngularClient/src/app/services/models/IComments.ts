@@ -1,6 +1,6 @@
 ﻿
 export interface IComments {
-    id: number;
-    comment: string;
-    rating: number;
+    id?: number;
+    comment?: string;
+    rating?: number;
 }

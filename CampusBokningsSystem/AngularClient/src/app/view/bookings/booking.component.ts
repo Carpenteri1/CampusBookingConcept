@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { IconList } from '../../services/data/iconsList.service';
 import { FormBuilder } from '@angular/forms';
 import { IRooms } from '../../services/models/IRooms';
-import { FetchData } from '../../services/data/fetchData';
-
+import { apiConnection } from '../../services/data/apiConnection.service';
+import { IBooking } from '../../services/models/IBookings';
 @Component({
     selector: 'Booking-component',
     templateUrl: 'booking.component.html',
@@ -12,13 +12,15 @@ import { FetchData } from '../../services/data/fetchData';
 export default class BookingView implements OnInit{
     public roomObjects: IRooms[] = [];
     public seatingList: number[] = [];
+    private newBooking = {} as IBooking;
     seatsAvailable: any;
 
 
-    constructor(private formBuilder: FormBuilder, public icons: IconList, private apiData: FetchData) {
+    constructor(private formBuilder: FormBuilder,
+        public icons: IconList,
+        private apiData: apiConnection) {
 
     }
-
 
     public bookingForm = this.formBuilder.group({
         dateStart:'',
@@ -27,47 +29,29 @@ export default class BookingView implements OnInit{
         className:'',
         seatsBooked: '',
         roomName: '',
-        roomId: '',
         user: '',
         password:'',
-        userId:'',
     });
 
-    /*
-     *IRoom
-    Id: number;
-    roomName: string;
-    location: string;
-    seating: number;
-    typeOfRoom: RoomType;
-    equipment?: string;
-    description?: string;
-    rating?: Set<Rating>;*/
-
-
-
-
-    /*
-     * IBooking
-    id: number;
-    dateStart: Date;
-    dateEnd: Date;
-    timeStart?: string;
-    timeEnd?: string;
-    className?: string;
-    seatsBooked?: number;
-    room: IRooms;
-    user: number;*/
-
-    onSubmit() {
-
-        console.log("submitted and name is " + this.bookingForm.value.roomName + " seatsbooked " + this.bookingForm.value.seatsBooked)
+    async onSubmit(data: any) {
+        let dateStart = `${data.dateStart}T${data.timeStart}`;
+        let dateEnd = `${data.dateStart}T${data.timeEnd}`;
+        this.newBooking =
+        {
+            timeStart: new Date(dateStart),
+            timeEnd: new Date(dateEnd),
+            className: String(data.className),
+            seatsBooked: Number(data.seatsBooked),
+            room: {
+                roomName: data.roomName,
+                
+            },
+            user: {
+                userName: data.user,
+            }
+        }
+        this.apiData.postBookingData(this.newBooking);
         this.bookingForm.reset();
-        /*
-        this.data
-            .postData()
-            .subscribe(() => console.log(JSON.stringify(status)));
-            */
     }
     modo() {
 
@@ -77,17 +61,12 @@ export default class BookingView implements OnInit{
         for (let i = 0; i <= Number(this.seatsAvailable); i++) {
             this.seatingList[i] = i;
         }
-
-
-
-
-        //for testing only
-        console.log("Seats available " + this.seatsAvailable)
     }
-    ngOnInit(): void {
-        this.apiData.getRoomData().subscribe(data => {
+    async ngOnInit(): Promise<void> {
+        (await this.apiData.getRoomData()).subscribe(data => {
             this.roomObjects = data;
         })
+
     }
 
 }

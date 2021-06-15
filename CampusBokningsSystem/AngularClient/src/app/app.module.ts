@@ -12,9 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { CommentsView } from './view/comments/comments.component';
-import { FetchData } from './services/data/fetchData';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { apiConnection } from './services/data/apiConnection.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
         SearchView,
         BookingView,
         CommentsView,
-
   ],
   imports: [
       BrowserModule,
@@ -39,7 +38,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     providers: [
         TestData,
         IconList,
-        FetchData
+        apiConnection
     ],
   bootstrap: [AppComponent]
 })

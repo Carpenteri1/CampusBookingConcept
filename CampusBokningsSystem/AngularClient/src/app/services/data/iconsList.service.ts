@@ -14,6 +14,7 @@ export class IconList {
         previousArrow: this.localhost +"AngularClient/assets/Files/Icons/previous.png",
         students_cap: this.localhost +"AngularClient/assets/Files/Icons/students-cap.png",
         time: this.localhost +"AngularClient/assets/Files/Icons/time.png",
-        campusIcon: this.localhost +"AngularClient/assets/Files/Icons/campus_liggande_svart_trans.png"
+        campusIcon: this.localhost + "AngularClient/assets/Files/Icons/campus_liggande_svart_trans.png",
+        armchair: this.localhost + "AngularClient/assets/Files/Icons/armchair.png"
     }
 }

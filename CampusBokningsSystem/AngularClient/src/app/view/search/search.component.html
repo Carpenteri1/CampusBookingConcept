@@ -25,10 +25,17 @@
                         </div>
 
                         <div [@openClose]="isOpen ? 'open' : 'closed'">
-                            <h1>awesome title</h1>
-                            <p>bra text men {{ isOpen ? 'öppnar' : 'stänger' }} nu boxen!</p>
+                            <div class="row" *ngIf="isOpen">
+                                <input type="datetime" /> <input type="time" />
+                            </div>
+                            <div class="row" *ngIf="isOpen">
+                                <label>Sortera efter</label>
+                                <select class="form-control">
+                                    <option></option>
+                                    <option *ngFor="let data of roomType | keyvalue" [(ngModel)]="searchText">{{data.key}}</option>
+                                </select>
+                            </div>
                         </div>
-                        <button type="submit" value="SÖK" class="w-100 mw-100 mt-3 searchformbutton">SÖK</button>
                     </div>
                 </form>
             </div>
@@ -40,14 +47,14 @@
             </div>
             <div class="d-flex pt-2">
                 <div class="d-flex flex-row">
-                    <p>Visa även avlutade bokningar</p><input type="checkbox" [(ngModel)]="disabled" class="mt-2 ml-2"/>
+                    <p>Visa även avlutade bokningar</p><input type="checkbox" [(ngModel)]="showPassed" class="mt-2 ml-2"/>
                 </div>
                 <div class="ml-auto">
                     <p>Antal bokningar: {{todaysBookings.length}}</p>
                 </div>
             </div>
-            <div *ngFor="let data of bookingObject | filter:searchText">
-                <ul class="p-2 info-block" *ngIf="(data.timeEnd | date:'dd/MM/yyyy') === (currentDateTime | date:'dd/MM/yyyy') && !disabled" >
+            <div *ngFor="let data of todaysBookings | filter:searchText" [@showHidePassed]="showPassed ? 'dontShowPassed' : 'showPassed'">
+                <ul class="p-2 info-block">
                     <li>
                         <div class="d-flex search-form-timedate">
                             <img src="{{icons.assets.clock}}" width="24" height="24" style="margin-top:0.8%;" /><p>&nbsp;&nbsp;&nbsp;{{data.timeStart | date:'HH:mm'}} - {{data.timeEnd | date:'HH:mm'}}</p>
@@ -60,9 +67,21 @@
                         <img src="{{icons.assets.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.assets.pin}}" width="24">&nbsp;{{data.room.roomName}}
                     </li>
                     <li>
-                        <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.className}}
+                        <div *ngFor="let type of roomType | keyvalue | filter:searchText">
+                            <div *ngIf='data.room.typeOfRoom === type.value'>
+                                <div *ngIf="type.value != 3">
+                                    <img src="{{icons.assets.armchair}}" width="24" />&nbsp;&nbsp;&nbsp;{{type.key}}
+                                </div>
+                                <div *ngIf="type.value === 3">
+                                    <img src="{{icons.assets.armchair}}" width="24" />&nbsp;&nbsp;&nbsp;Mötesrum och Grupprum
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li  class="pt-3">
+                    <li>
+                        <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.className}}&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li  class="pt-3" *ngIf="data.room.description != null">
                             <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
                     </li>
                     <li >
@@ -72,7 +91,9 @@
                         <img src="{{icons.assets.downArrow}}" width="20" />
                     </li>
                 </ul>
-                <ul class="p-2 info-block" *ngIf="disabled">
+            </div>
+            <div *ngFor="let data of bookingObject | filter:searchText" [@showHidePassed]="showPassed ? 'showPassed' : 'dontShowPassed'">
+                <ul class="p-2 info-block" *ngIf="(currentDateTime | date:'dd/MM/yyyy') === (data.timeEnd | date:'dd/MM/yyyy')" >
                     <li>
                         <div class="d-flex search-form-timedate">
                             <img src="{{icons.assets.clock}}" width="24" height="24" style="margin-top:0.8%;" /><p>&nbsp;&nbsp;&nbsp;{{data.timeStart | date:'HH:mm'}} - {{data.timeEnd | date:'HH:mm'}}</p>
@@ -85,9 +106,21 @@
                         <img src="{{icons.assets.home}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.location}}&nbsp;&nbsp;&nbsp;<img src="{{icons.assets.pin}}" width="24">&nbsp;{{data.room.roomName}}
                     </li>
                     <li>
+                        <div *ngFor="let type of roomType | keyvalue | filter:searchText">
+                            <div *ngIf='data.room.typeOfRoom === type.value'>
+                                <div *ngIf="type.value != 3">
+                                    <img src="{{icons.assets.armchair}}" width="24" />&nbsp;&nbsp;&nbsp;{{type.key}}
+                                </div>
+                                <div *ngIf="type.value === 3">
+                                    <img src="{{icons.assets.armchair}}" width="24" />&nbsp;&nbsp;&nbsp;Mötesrum och Grupprum
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
                         <img src="{{icons.assets.students_cap}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.className}}
                     </li>
-                    <li class="pt-3">
+                    <li class="pt-3" *ngIf="data.room.description != null">
                         <img src="{{icons.assets.info_button}}" width="24" />&nbsp;&nbsp;&nbsp;{{data.room.description}}
                     </li>
                     <li>

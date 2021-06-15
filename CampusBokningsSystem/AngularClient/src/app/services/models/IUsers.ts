@@ -2,9 +2,9 @@
 import { IComments } from "./IComments";
 
 export interface IUsers {
-    Id: number;
-    userName: string;
-    password: string;
-    typeOfAccount: TypeOfAccount;
+    id?: number;
+    userName?: string;
+    password?: string;
+    typeOfAccount?: TypeOfAccount;
     comment?: Set<IComments>;
 }

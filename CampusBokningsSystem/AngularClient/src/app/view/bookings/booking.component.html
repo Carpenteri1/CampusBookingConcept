@@ -12,33 +12,33 @@
             <img src="{{icons.assets.campusIcon}}" width="250" />
         </div>
         <div class="makeSpace"></div>
-            <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="bookingForm" (ngSubmit)="onSubmit(bookingForm.value)">
                 <div class="p-2 shadow">
                     <div class="row g-3" style="margin-top:2em;">
                         <div class="col-6">
                             <label for="dateStart">Boknings datum</label>
-                            <input class="form-control" type="date" id="dateStart" formControlName="dateStart" required />
+                            <input class="form-control" type="date" id="dateStart" formControlName="dateStart" ngModel  required />
                         </div>
                         <div class="col-1"> </div>
                         <div class="col-auto">
                             <label for="timeStart">Start tid</label>
-                            <input class="form-control" type="time" id="timeStart" formControlName="timeStart" required />
+                            <input class="form-control" type="time" id="timeStart" formControlName="timeStart" ngModel  required />
                         </div>
                         <div class="col-auto">
                             <label for="timeEnd">Slut tid</label>
-                            <input class="form-control" type="time" id="timeEnd" formControlName="timeEnd" required />
+                            <input class="form-control" type="time" id="timeEnd" formControlName="timeEnd" ngModel  required />
                         </div>
                     </div>
                     <div class="row" style="margin-top:2em;">
                         <div class="col-3">
                             <label for="roomName">Välj ett rum</label>
-                            <select class="form-control" id="power" required formControlName="roomName" (ngModelChange)="modo()">
+                            <select class="form-control" id="power" required formControlName="roomName" ngModel  (ngModelChange)="modo()">
                                 <option *ngFor="let data of roomObjects" [value]="data.roomName">{{data.roomName}}</option>
                             </select>
                         </div>
                         <div class="col-4" style="margin-left:-0.5em;">
                             <label>Boka antal platser</label>
-                            <select class="form-control w-75" id="power" required formControlName="seatsBooked" (ngModelChange)="modo()">
+                            <select class="form-control w-75" id="power" required formControlName="seatsBooked" ngModel  (ngModelChange)="modo()">
                                 <option [value]="seats" *ngFor="let seats of seatingList">
                                     {{seats}}
                                 </option>
@@ -46,20 +46,23 @@
                         </div>
                         <div class="col-5" style="margin-left:0.5em;">
                             <label for="className">Klass namn</label>
-                            <input class="form-control" id="className" type="text" formControlName="className" required />
+                            <input class="form-control" id="className" type="text" formControlName="className" ngModel  required />
                         </div>
                     </div>
-                    <div class="row" style="margin-top:2em;">
-                        <div class="col-6">
-                                <label for="user">Användare</label>
-                                <input class="form-control" id="user" type="text" formControlName="user" required />
-                        </div>
-                        <div class="col-1"></div>
-                        <div class="col-5">
-                            <label for="">Lösenord</label>
-                            <input class="form-control" id="user" type="password" formControlName="" required />
-                        </div>
-                    </div>
+    <div class="row" style="margin-top:2em;">
+        <div class="col-6">
+                <label for="user">Användare</label>
+                <input class="form-control" id="user" type="text" formControlName="user" required />
+        </div>
+        <div class="col-6"></div>
+        </div>
+                                     <!--
+        <div class="col-1"></div>
+       <div class="col-5">
+            <label for="">Lösenord</label>
+            <input class="form-control" id="user" type="password" formControlName="" required />
+        </div>
+                </div>-->
                     <div class="row p-2" style="margin-top:2em;">
                         <div class="col-9"></div>
                         <div class="col-3">

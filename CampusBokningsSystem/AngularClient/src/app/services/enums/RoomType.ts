@@ -1,7 +1,7 @@
 ﻿export enum RoomType {
-    mötesrum,
-    grupprum,
-    grupprum_möterum,
-    lektionsal,
-    datorsal
+   Mötesrum = 1,
+   Grupprum = 2,
+   GruppRum_MötesRum = 3,
+   Lektionsal = 4,
+   Datorsal = 5
 }

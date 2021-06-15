@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, formatDate } from '@angular/common'
-import { Observable } from 'rxjs';
-
 import { IconList } from '../../services/data/iconsList.service';
-import { TestData } from '../../services/testdata.service';
-import { FetchData } from '../../services/data/fetchData';
-import { IRooms } from '../../services/models/IRooms';
 import { IBooking } from '../../services/models/IBookings';
-import { Data } from '@angular/router';
 import { trigger, transition, state, animate, style, stagger, query } from '@angular/animations';
+import { RoomType } from '../../services/enums/RoomType';
+import { apiConnection } from '../../services/data/apiConnection.service';
 
 @Component({
     selector: 'search-component',
@@ -16,96 +11,83 @@ import { trigger, transition, state, animate, style, stagger, query } from '@ang
     styleUrls: [],
     animations: [
         trigger('openClose', [
-        // ...
-        state('open', style({
-            height: '200px',
-            opacity: 1,
-        })),
-        state('closed', style({
-            height: '0px',
-            opacity: 0,
-        })),
-        transition('open => closed', [
-            animate('1s')
-        ]),
-        transition('closed => open', [
-            animate('0.5s')
-        ]),
-        transition('* => closed', [
-            animate('1s')
-        ]),
-        transition('* => open', [
-            animate('0.5s')
-        ]),
-        transition('open <=> closed', [
-            animate('0.5s')
-        ]),
-        transition('* => open', [
-            animate('1s',
-                style({ opacity: '*' }),
-            ),
-        ]),
-        transition('* => *', [
-            animate('1s')
-        ]),
-        ]),
-        trigger('filterAnimation', [
-            transition(':enter, * => 0, * => -1', []),
-            transition(':increment', [
-                query(':enter', [
-                    style({ opacity: 0, width: '0px' }),
-                    stagger(50, [
-                        animate('300ms ease-out', style({ opacity: 1, width: '*' })),
-                    ]),
-                ], { optional: true })
+                state('open', style({
+                height: '200px',
+                opacity: 1,
+            })),
+                state('closed', style({
+                height: '0px',
+                opacity: 0,
+            })),
+                transition('open => closed', [
+                animate('0.3s')
             ]),
-            transition(':decrement', [
-                query(':leave', [
-                    stagger(50, [
-                        animate('300ms ease-out', style({ opacity: 0, width: '0px' })),
-                    ]),
-                ])
+                transition('closed => open', [
+                animate('0.3s')
+            ])
+           
+        ]),
+        trigger("showHidePassed",[
+                state('showPassed', style({
+                height: '300px',
+                opacity: 1,
+            })),
+                state('dontShowPassed', style({
+                height: '0px',
+                opacity: 0,
+            })),
+                transition('showPassed => dontShowPassed', [
+                animate('0.8s')
             ]),
+                transition('dontShowPassed => showPassed', [
+                animate('0.8s')
+            ]),
+            
         ]),
     ]
 })
 export default class SearchView implements OnInit {
 
 
-    constructor(public icons:IconList,private apiData:FetchData) {
+    constructor(public icons: IconList, private apiData: apiConnection) {
     }
+    public roomType = RoomType;
     searchText:any;
     public bookingObject: IBooking[] = [];
     public todaysBookings: any[] = [];
+
     currentDateTime = new Date();
+    timestamp = new Date();
     isOpen = false;
     disabled = false;
-    passed = false;
-
-    get bookings() {
-        return this.bookingObject;
-    }
+    showPassed = false;
 
     toggle() {
         this.isOpen = !this.isOpen;
     }
 
-    createListOfCurretDate() {
-        this.todaysBookings.push(this.bookingObject.find(item => item.timeStart >= this.currentDateTime));
-        console.log(this.currentDateTime.toLocaleDateString('sv-SV', { day: '2-digit', month: '2-digit', year: 'numeric' ,hour:'2-digit',minute:'2-digit'}))
-    }
     updateTime()
     {
         setInterval(() => {
             this.currentDateTime = new Date();
         }, 1000);
     }
-    ngOnInit(): void {
-        this.updateTime(); 
-        this.apiData.getBookingData().subscribe(data => {
-            this.bookingObject = data;
-        })
-        this.createListOfCurretDate();
+    async ngOnInit() : Promise<void> { 
+        this.updateTime();
 
+        this.bookingObject = [];
+        this.todaysBookings = [];
+        (await this.apiData.getBookingData()).subscribe(async data => {
+            this.bookingObject = await data;
+            for (let i = 0; i < this.bookingObject.length; i++) {
+                let currentTime = new Date(this.currentDateTime);
+                let tempDateEnd = new Date(this.bookingObject[i].timeEnd);
+                if (tempDateEnd.getHours() > currentTime.getHours() && 
+                    tempDateEnd.toDateString() === currentTime.toDateString()) {
+                    this.todaysBookings.push(this.bookingObject[i]);
+                }
+            }
+        });
+    
     }    
 }
